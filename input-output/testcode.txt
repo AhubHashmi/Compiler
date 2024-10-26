@@ -1,0 +1,66 @@
+def int abu_Zar(){
+    int a = 5;
+}
+class Abu_joker from Andrew_tate private:{
+    A a();
+    int a = this.a;
+    protected:
+    def void gret(A a,int hase){
+        int a = abu_joker() + this.a();
+    for(int a =3;;a=12){
+        int a = 5;
+        this.a = this.b+super.asd[123][23].are[23] = 24;
+    }
+    }
+    def static void Abdi2k(int a,int b){
+        int c = a+b;
+    }
+    constructor heloo(){
+        this.a = 5;
+    }
+}
+def int power(int a,int b){
+    int f =41;
+}
+void main(a+b,true){
+    float a = abdi2k, b = 15;
+    int a = trying().r.r.a.w + a[23][321];
+    a[2][3] = 15;
+    if(a<=b){
+        int haha = hele;
+    }elif(asd > 12){
+        float gg = 12;
+    }else{
+        bool algebrea = 123;
+    }
+    while(undertakker==john){
+        if(gg != wp){
+            int a = 5;
+            while(true){
+                int a = 5;
+            }
+        }
+    }
+    for(ID a();; a=a+1 ){
+        int check = 5;
+    }
+    A a();
+    def void greeting(int a,ID id){
+        int a = 5;
+        return true;
+    }
+    try{
+        int a = 5;
+    }catch(){
+        int a = 5;
+    }finally{
+
+    }
+    list check[3][3] = [[1,2,3],[1,2,3],[1,2,3]];
+    set int checkagain[14] = {1,23,4,12,34};
+    break;
+    continue;
+}
+def int power(int a,int b){
+    int f =41;
+}

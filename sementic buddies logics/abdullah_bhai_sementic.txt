@@ -1,0 +1,249 @@
+ScopeTable=[]
+DefTable=[]
+Stack=[0]
+currentScope=0
+
+class ScopeTableInstance:
+    def _init_(self,Name,Type,Scope):
+        self.Name = Name
+        self.Type = Type
+        self.Scope = Scope
+
+class DefTableInstance:
+    def _init_(self,Name,Type,Acc_Mod,Parent,Type_Mod):
+        self.Name = Name
+        self.Type = Type
+        self.Acc_Mod = Acc_Mod
+        self.Parent = Parent
+        self.Type_Mod = Type_Mod
+        self.MemTable = []
+
+
+        
+
+class MemTableInstance:
+    def _init_(self,Name,Type,Acc_Mod,Type_Mod,Const,Class_Name):
+        self.Name = Name
+        self.Type = Type
+        self.Acc_Mod = Acc_Mod
+        self.Type_Mod = Type_Mod
+        self.Const = Const
+        self.Class_Name = Class_Name
+
+
+def lookUpDefTable(Name,Type):
+    global CCN
+    global CC
+    for i in range(len(DefTable)):
+        if (DefTable[i].Name == Name):
+            # if (DefTable[i].Type==Type):
+                CCN=Name
+                CC=DefTable[i].Parent
+                return DefTable[i]
+    if (len(DefTable)==0):
+        return False
+    else:
+        # print(f"Can't Find The Structure {Name}")
+        return False
+
+def lookUpMemTable(Name,Class_Name):
+    global CCN,CCR
+    global def_type
+    CCN =Class_Name
+    CCR = lookUpDefTable(CCN,def_type)
+    if (CCR):
+        for j in range(len(CCR.MemTable)):
+            if (CCR.MemTable[j].Name == Name):
+                return CCR.MemTable[j].Type
+            
+
+        return True
+            
+            
+
+
+def lookUpFuncST(Name,Plist):
+    dt,rtype =Plist.split('->')
+    print(dt)
+
+    for j in range(len(Stack)):
+        check_scope = Stack[j]
+        for i in range(len(ScopeTable)):
+            if (ScopeTable[i].Name == Name):
+                edt,ertype=ScopeTable[i].Type.split('->') 
+                if edt == dt:
+                    if ScopeTable[i].Scope == check_scope:
+                        print(check_scope)
+                        print(ertype,"JOBOKKO")
+                        return ertype
+    
+    return True
+
+
+
+def lookUpFuncMT(Name,Plist,Class_Name):
+    print(Name,Plist,Class_Name,"INSIDE  MT")
+    global CCN,CCR
+    CCN =Class_Name
+    CCR = lookUpDefTable(CCN,"class")
+    if (CCR) :
+        for j in range(len(CCR.MemTable)):
+            if (CCR.MemTable[j].Name == Name):
+                if(CCR.MemTable[j].Type == Plist):
+                    return CCR.MemTable[j]
+        
+        return True
+            
+
+    else:
+        print(f"NO CLASS FOUND {CCN}")
+        sys.exit()
+    
+    
+                
+def compatibiltyCheck(LeftOp,RightOp,Operator):
+    print ("Inside Compatibility Check")
+    
+    if (LeftOp == 'integ' or LeftOp=='int_const') and (RightOp == 'integ' or RightOp == 'int_const') and Operator in ['+','-','*','/','%','>','<','<=','>=','!=','=','==']:
+        return 'integ'
+    
+    elif (LeftOp == 'fpoint' or LeftOp== 'fpoint_const') and (RightOp == 'fpoint' or RightOp == 'fpoint_const') and Operator in ['+','-','*','/','%','>','<','<=','>=','!=','=','==']:
+        return 'fpoint'
+
+    elif (LeftOp=='fpoint' or LeftOp=='fpoint_const') and (RightOp == 'integ' or RightOp =='integ_const') and Operator in ['+','-','*','/','%','>','<','<=','>=','!=','==']:
+        
+        return 'fpoint'
+
+    elif (LeftOp=='integ' or LeftOp=='integ_const') and (RightOp == 'fpoint' or RightOp =='fpoint_const') and Operator in ['+','-','*','/','%','>','<','<=','>=','!=','==']:
+        
+        return 'fpoint'
+    
+    elif (LeftOp=='integ' or LeftOp=='integ_const') and (RightOp == 'fpoint' or RightOp =='fpoint_const') and Operator == "=":
+        
+        return 'integ'
+    
+    elif (LeftOp=='fpoint' or LeftOp=='fpoint_const') and (RightOp == 'integ' or RightOp =='integ_const') and Operator =='=':
+        
+        return 'fpoint'
+    
+    elif (LeftOp=='str' or LeftOp=='str_const') and (RightOp == 'str' or RightOp =='str_const') and Operator in ['+','=']:
+        return 'str'
+
+    else:
+        return False
+
+
+    
+def CompatibilityTest(Optype,Operator):
+    if Operator in ['!','++','--']:
+        if Optype == 'integ':
+            return 'integ'
+        elif Optype == 'fpoint':
+            return 'fpoint'    
+    else:
+        return False
+        
+
+        
+    
+
+
+def insertScopeTable(Name,Type,Scope):
+    if ("str" not in Type) and ("integ" not in Type) and ("fpoint" not in Type):
+        srtr=lookUpDefTable(Type,'class')
+        if(srtr):
+                if srtr.Type!="abstract":
+                    obj = ScopeTableInstance(Name,Type,Scope)
+                    print(f"Object {Name} is added")
+                else:
+                    print("Error: Cannot declare an object of abstract class.")
+                    sys.exit()
+        else:
+            print(f'Error: Class {Type} does not exist')
+            sys.exit()
+
+    if "->" in Type:
+
+        if (lookUpFuncST(Name,Type)==True):
+            obj = ScopeTableInstance(Name,Type,Scope)
+            ScopeTable.append(obj)
+            print(f"Function {Name} is added")
+        else:
+            print("Function Redeclaration Error")
+            sys.exit()
+    else:
+        for i in range(len(ScopeTable)):
+            if ScopeTable[i].Name == Name: 
+                if ScopeTable[i].Scope ==Scope:
+                    print(f"Redeclaration Error in Line No {List[i].Line_No}: {Name} is already declared ")
+                    sys.exit()
+                
+        obj=ScopeTableInstance(Name,Type,Scope)
+        ScopeTable.append(obj)
+        print(f"Variable {Name} is added")
+            
+            
+
+
+
+def insertDefTable(Name,Type,Acc_Mod,Parent,Type_Mod):
+    global CCN,CCR
+    if(lookUpDefTable(Name,Type)):
+        print("Error !  Redefinition of "+Name+".")
+        sys.exit()
+        
+    else:
+        CCN = Name
+        obj=DefTableInstance(Name,Type,Acc_Mod,Parent,Type_Mod)
+        CCR = obj.MemTable
+        DefTable.append(obj)
+        print(f"{CCN} is added as {Type}")
+
+
+
+def insertMemTable(Name,Type,Acc_Mod,Type_Mod,Const,Class_Name):
+    global CCR ,CCN
+    print(Name,Type,Acc_Mod,Type_Mod,Const,Class_Name,"INSIDE")
+    if "->" in Type:
+        a = lookUpFuncMT(Name,Type,Class_Name)
+
+        if(a!=True):
+            print("Error: Redefinition of member function '"+str(Name)+"'")
+            sys.exit()
+
+
+        if(a==True):
+            obj=MemTableInstance(Name,Type,Acc_Mod,Type_Mod,Const,Class_Name)
+            CCR.MemTable.append(obj)
+            print(f"{Name} function is added in {Class_Name} as member")
+
+    else:
+        a = lookUpMemTable(Name,Class_Name)
+        
+
+        if(a!=True):
+            print("Error: Redefinition of member variable '"+str(Name)+"'")
+            sys.exit()
+
+
+        if(a==True):
+            obj=MemTableInstance(Name,Type,Acc_Mod,Type_Mod,Const,Class_Name)
+            CCR.MemTable.append(obj)
+            print(f"{Name} is added in {Class_Name} as member")
+
+
+def createScope():
+    global Stack
+    global scope
+    global currentScope
+    scope+=1
+    currentScope = scope
+    Stack.insert(0,scope)
+
+
+
+def destroyScope():
+    global currentScope
+    global Stack
+    Stack.pop(0)
+    currentScope = Stack[0]

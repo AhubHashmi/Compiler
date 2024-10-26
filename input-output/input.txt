@@ -1,0 +1,64 @@
+def void helo(){
+    return;
+}
+class Abdi2k{
+    list check[3][3] = [[1,2,3],[1,2,3],[1,2,3]];
+    set int checkagain[14] = {1,23,4,12,34};
+    list check1[3][3];
+    int b;
+    private:
+    int a;
+    def int check(){
+    try{
+        int a = 5;
+    }catch(){
+        int a = 5;
+    }finally{
+
+    }
+    list check[3][3] = [[1,2,3],[1,2,3],[1,2,3]];
+    set int checkagain[14] = {1,23,4,12,34};
+    break;
+    continue;
+    this.check[2] = 5;
+    this.ID.ID;
+    this.ID = 15;
+    this.ID().ID;
+    this.ID[12][23] = 24;
+    }
+    public:
+    def void gret(A a,int hase){
+        int a = abu_joker() + this.a();
+    for(int a =3;;a=12){
+        int a = 5;
+        this.a = this.b+super.asd[123][23].are[23] = 24;
+    }
+    }
+    constructor hello(){
+    for(ID a();(a<b); a=a+1 ){
+        int check = 5;
+    }
+    while(undertakker==john){
+        if(gg != this.wp()){
+            int a = 5;
+            while(true){
+                int a = 5;
+            }
+        }
+    }
+    if(this.a<=b){
+        int haha = hele;
+    }elif(super.asd > 12){
+        float gg = 12;
+    }else{
+        bool algebrea = 123;
+    }
+    float a = super.abdi2k, b = 15;
+    int a = this.trying().r.r.a.w + this.a[23][321];
+    this.a[2][3] = 15;
+    }
+}
+void main(){
+    int a = (a+b)+(abdi2k/habib)*c;
+    return;
+}

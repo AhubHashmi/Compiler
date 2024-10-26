@@ -1,0 +1,464 @@
+def | def | 1
+void | void | 1
+ID | helo | 1
+( | ( | 1
+) | ) | 1
+{ | { | 1
+return | return | 2
+; | ; | 2
+} | } | 3
+class | class | 4
+ID | Abdi2k | 4
+{ | { | 4
+list | list | 5
+ID | check | 5
+[ | [ | 5
+int literal | 3 | 5
+] | ] | 5
+[ | [ | 5
+int literal | 3 | 5
+] | ] | 5
+= | = | 5
+[ | [ | 5
+[ | [ | 5
+int literal | 1 | 5
+, | , | 5
+int literal | 2 | 5
+, | , | 5
+int literal | 3 | 5
+] | ] | 5
+, | , | 5
+[ | [ | 5
+int literal | 1 | 5
+, | , | 5
+int literal | 2 | 5
+, | , | 5
+int literal | 3 | 5
+] | ] | 5
+, | , | 5
+[ | [ | 5
+int literal | 1 | 5
+, | , | 5
+int literal | 2 | 5
+, | , | 5
+int literal | 3 | 5
+] | ] | 5
+] | ] | 5
+; | ; | 5
+set | set | 6
+DT | int | 6
+ID | checkagain | 6
+[ | [ | 6
+int literal | 14 | 6
+] | ] | 6
+= | = | 6
+{ | { | 6
+int literal | 1 | 6
+, | , | 6
+int literal | 23 | 6
+, | , | 6
+int literal | 4 | 6
+, | , | 6
+int literal | 12 | 6
+, | , | 6
+int literal | 34 | 6
+} | } | 6
+; | ; | 6
+list | list | 7
+ID | check1 | 7
+[ | [ | 7
+int literal | 3 | 7
+] | ] | 7
+[ | [ | 7
+int literal | 3 | 7
+] | ] | 7
+; | ; | 7
+DT | int | 8
+ID | b | 8
+; | ; | 8
+access-modifier | private | 9
+: | : | 9
+DT | int | 10
+ID | a | 10
+; | ; | 10
+def | def | 11
+DT | int | 11
+ID | check | 11
+( | ( | 11
+) | ) | 11
+{ | { | 11
+try | try | 12
+{ | { | 12
+DT | int | 13
+ID | a | 13
+= | = | 13
+int literal | 5 | 13
+; | ; | 13
+} | } | 14
+catch | catch | 14
+( | ( | 14
+) | ) | 14
+{ | { | 14
+DT | int | 15
+ID | a | 15
+= | = | 15
+int literal | 5 | 15
+; | ; | 15
+} | } | 16
+finally | finally | 16
+{ | { | 16
+} | } | 18
+list | list | 19
+ID | check | 19
+[ | [ | 19
+int literal | 3 | 19
+] | ] | 19
+[ | [ | 19
+int literal | 3 | 19
+] | ] | 19
+= | = | 19
+[ | [ | 19
+[ | [ | 19
+int literal | 1 | 19
+, | , | 19
+int literal | 2 | 19
+, | , | 19
+int literal | 3 | 19
+] | ] | 19
+, | , | 19
+[ | [ | 19
+int literal | 1 | 19
+, | , | 19
+int literal | 2 | 19
+, | , | 19
+int literal | 3 | 19
+] | ] | 19
+, | , | 19
+[ | [ | 19
+int literal | 1 | 19
+, | , | 19
+int literal | 2 | 19
+, | , | 19
+int literal | 3 | 19
+] | ] | 19
+] | ] | 19
+; | ; | 19
+set | set | 20
+DT | int | 20
+ID | checkagain | 20
+[ | [ | 20
+int literal | 14 | 20
+] | ] | 20
+= | = | 20
+{ | { | 20
+int literal | 1 | 20
+, | , | 20
+int literal | 23 | 20
+, | , | 20
+int literal | 4 | 20
+, | , | 20
+int literal | 12 | 20
+, | , | 20
+int literal | 34 | 20
+} | } | 20
+; | ; | 20
+break | break | 21
+; | ; | 21
+continue | continue | 22
+; | ; | 22
+this | this | 23
+. | . | 23
+ID | check | 23
+[ | [ | 23
+int literal | 2 | 23
+] | ] | 23
+= | = | 23
+int literal | 5 | 23
+; | ; | 23
+this | this | 24
+. | . | 24
+ID | ID | 24
+. | . | 24
+ID | ID | 24
+; | ; | 24
+this | this | 25
+. | . | 25
+ID | ID | 25
+= | = | 25
+int literal | 15 | 25
+; | ; | 25
+this | this | 26
+. | . | 26
+ID | ID | 26
+( | ( | 26
+) | ) | 26
+. | . | 26
+ID | ID | 26
+; | ; | 26
+this | this | 27
+. | . | 27
+ID | ID | 27
+[ | [ | 27
+int literal | 12 | 27
+] | ] | 27
+[ | [ | 27
+int literal | 23 | 27
+] | ] | 27
+= | = | 27
+int literal | 24 | 27
+; | ; | 27
+} | } | 28
+access-modifier | public | 29
+: | : | 29
+def | def | 30
+void | void | 30
+ID | gret | 30
+( | ( | 30
+ID | A | 30
+ID | a | 30
+, | , | 30
+DT | int | 30
+ID | hase | 30
+) | ) | 30
+{ | { | 30
+DT | int | 31
+ID | a | 31
+= | = | 31
+ID | abu_joker | 31
+( | ( | 31
+) | ) | 31
+pm | + | 31
+this | this | 31
+. | . | 31
+ID | a | 31
+( | ( | 31
+) | ) | 31
+; | ; | 31
+for | for | 32
+( | ( | 32
+DT | int | 32
+ID | a | 32
+= | = | 32
+int literal | 3 | 32
+; | ; | 32
+; | ; | 32
+ID | a | 32
+= | = | 32
+int literal | 12 | 32
+) | ) | 32
+{ | { | 32
+DT | int | 33
+ID | a | 33
+= | = | 33
+int literal | 5 | 33
+; | ; | 33
+this | this | 34
+. | . | 34
+ID | a | 34
+= | = | 34
+this | this | 34
+. | . | 34
+ID | b | 34
+pm | + | 34
+super | super | 34
+. | . | 34
+ID | asd | 34
+[ | [ | 34
+int literal | 123 | 34
+] | ] | 34
+[ | [ | 34
+int literal | 23 | 34
+] | ] | 34
+. | . | 34
+ID | are | 34
+[ | [ | 34
+int literal | 23 | 34
+] | ] | 34
+= | = | 34
+int literal | 24 | 34
+; | ; | 34
+} | } | 35
+} | } | 36
+constructor | constructor | 37
+ID | hello | 37
+( | ( | 37
+) | ) | 37
+{ | { | 37
+for | for | 38
+( | ( | 38
+ID | ID | 38
+ID | a | 38
+( | ( | 38
+) | ) | 38
+; | ; | 38
+( | ( | 38
+ID | a | 38
+ro | < | 38
+ID | b | 38
+) | ) | 38
+; | ; | 38
+ID | a | 38
+= | = | 38
+ID | a | 38
+pm | + | 38
+int literal | 1 | 38
+) | ) | 38
+{ | { | 38
+DT | int | 39
+ID | check | 39
+= | = | 39
+int literal | 5 | 39
+; | ; | 39
+} | } | 40
+while | while | 41
+( | ( | 41
+ID | undertakker | 41
+ro | == | 41
+ID | john | 41
+) | ) | 41
+{ | { | 41
+if | if | 42
+( | ( | 42
+ID | gg | 42
+ro | != | 42
+this | this | 42
+. | . | 42
+ID | wp | 42
+( | ( | 42
+) | ) | 42
+) | ) | 42
+{ | { | 42
+DT | int | 43
+ID | a | 43
+= | = | 43
+int literal | 5 | 43
+; | ; | 43
+while | while | 44
+( | ( | 44
+bool literal | true | 44
+) | ) | 44
+{ | { | 44
+DT | int | 45
+ID | a | 45
+= | = | 45
+int literal | 5 | 45
+; | ; | 45
+} | } | 46
+} | } | 47
+} | } | 48
+if | if | 49
+( | ( | 49
+this | this | 49
+. | . | 49
+ID | a | 49
+ro | <= | 49
+ID | b | 49
+) | ) | 49
+{ | { | 49
+DT | int | 50
+ID | haha | 50
+= | = | 50
+ID | hele | 50
+; | ; | 50
+} | } | 51
+elif | elif | 51
+( | ( | 51
+super | super | 51
+. | . | 51
+ID | asd | 51
+ro | > | 51
+int literal | 12 | 51
+) | ) | 51
+{ | { | 51
+DT | float | 52
+ID | gg | 52
+= | = | 52
+int literal | 12 | 52
+; | ; | 52
+} | } | 53
+else | else | 53
+{ | { | 53
+DT | bool | 54
+ID | algebrea | 54
+= | = | 54
+int literal | 123 | 54
+; | ; | 54
+} | } | 55
+DT | float | 56
+ID | a | 56
+= | = | 56
+super | super | 56
+. | . | 56
+ID | abdi2k | 56
+, | , | 56
+ID | b | 56
+= | = | 56
+int literal | 15 | 56
+; | ; | 56
+DT | int | 57
+ID | a | 57
+= | = | 57
+this | this | 57
+. | . | 57
+ID | trying | 57
+( | ( | 57
+) | ) | 57
+. | . | 57
+ID | r | 57
+. | . | 57
+ID | r | 57
+. | . | 57
+ID | a | 57
+. | . | 57
+ID | w | 57
+pm | + | 57
+this | this | 57
+. | . | 57
+ID | a | 57
+[ | [ | 57
+int literal | 23 | 57
+] | ] | 57
+[ | [ | 57
+int literal | 321 | 57
+] | ] | 57
+; | ; | 57
+this | this | 58
+. | . | 58
+ID | a | 58
+[ | [ | 58
+int literal | 2 | 58
+] | ] | 58
+[ | [ | 58
+int literal | 3 | 58
+] | ] | 58
+= | = | 58
+int literal | 15 | 58
+; | ; | 58
+} | } | 59
+} | } | 60
+void | void | 61
+main | main | 61
+( | ( | 61
+) | ) | 61
+{ | { | 61
+DT | int | 62
+ID | a | 62
+= | = | 62
+( | ( | 62
+ID | a | 62
+pm | + | 62
+ID | b | 62
+) | ) | 62
+pm | + | 62
+( | ( | 62
+ID | abdi2k | 62
+mdm | / | 62
+ID | habib | 62
+) | ) | 62
+mdm | * | 62
+ID | c | 62
+; | ; | 62
+return | return | 63
+; | ; | 63
+} | } | 64
+$ | $ | 100
